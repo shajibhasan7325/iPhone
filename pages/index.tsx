@@ -41,26 +41,104 @@ export default function Home() {
               From $41.62/mo. or $999 before trade‑in
             </h3>
           </div>
-
-          <div></div>
-        </div>
-      </div>
-      {/* Less bezel */}
-      <div className="bg-scroll ">
-        <div className="pt-[180px]">
-          <div className="m-auto max-w-screen-lg ">
-            <div>
-              <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
-                Less bezel, more screen.
-              </h3>
+          {/* Hasans code will be here */}
+          {/* Less bezel */}
+          <div className="bg-scroll pb-[10rem]">
+            <div className="pt-[180px]">
+              <div className="m-auto max-w-screen-lg ">
+                <div>
+                  <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
+                    Less bezel, more screen.
+                  </h3>
+                </div>
+                <Image
+                  className="shadow-[0 -20px 30px 0 #000] mx-auto mt-[62px]"
+                  src="/less.jpg"
+                  width={500}
+                  height={600}
+                  alt="img"
+                />
+              </div>
             </div>
-            <Image
-              className=" shadow-[0 -20px 30px 0 #000] mt-[62px]"
-              src="/less.jpg"
-              width={600}
-              height={600}
-              alt="img"
+          </div>
+          {/* Hasans code will be here */}
+          <div>
+            <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
+              Kicks glass.
+            </h3>
+            <img src="/mobile.jpeg" className="mx-auto" alt="" />
+            <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
+              Ceramic Shield, tougher than any smartphone glass
+            </h3>
+            <button className="mx-auto rounded-full border bg-transparent px-4">
+              Find out how
+            </button>
+          </div>
+        </div>
+        <div className="relative">
+          <h3 className="absolute top-64 left-48 rotate-90 text-4xl font-bold">
+            Surgical-grade
+          </h3>
+          <img src="/canvas.png" className="mx-auto" alt="" />
+          <h3 className="absolute top-[40rem] right-48 rotate-90 text-4xl font-bold">
+            stainless steel.
+          </h3>
+        </div>
+        <div className="container flex items-center">
+          <div className="w-1/3">
+            <h3 className="text-4xl font-bold">
+              Blows other phones out of the water.
+            </h3>
+            <p>Industry‑leading IP68 water resistance</p>
+          </div>
+          <div className="w-2/3">
+            <img src="/waterfall.jpeg" alt="" />
+          </div>
+        </div>
+        <div className="text-center">
+          <video autoPlay muted width={1000} className="mx-auto">
+            <source src="/iphone.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <h3 className="text-4xl font-bold">Four finishing touches.</h3>
+          <p className="text-2xl leading-loose text-gray-400 ">
+            Pacific Blue, Gold, Silver, and Graphite
+          </p>
+        </div>
+        <div className="mt-12 text-center">
+          <h3 className="text-6xl font-bold text-gray-400">
+            Superfast wireless{" "}
+          </h3>
+          <h3 className="text-6xl font-bold leading-loose">Hello 5G.</h3>
+          <div className="relative">
+            <img
+              src="/frame.jpeg"
+              className="mx-auto w-1/2 object-cover"
+              alt=""
             />
+            <img
+              src="/topscreen.jpg"
+              className="absolute top-20 left-1/2  w-[34rem] -translate-x-1/2"
+              alt=""
+            />
+            <ul className="absolute top-20 left-1/2 w-[34rem] -translate-x-1/2 translate-y-1/2 space-y-4">
+              <li className="flex items-center ">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+              <li className="flex items-center ">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+              <li className="flex items-center">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+              <li className="flex items-center">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
