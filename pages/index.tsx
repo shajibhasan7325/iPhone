@@ -57,7 +57,7 @@ export default function Home() {
             <Image
               className=" shadow-[0 -20px 30px 0 #000] mt-[62px]"
               src="/less.jpg"
-              width={1000}
+              width={600}
               height={600}
               alt="img"
             />
