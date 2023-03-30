@@ -36,7 +36,7 @@ export default function Layout({
       <div
         className={`fixed top-12 w-full ${
           scrolled
-            ? " top-0 bg-[#000000] opacity-[.7] backdrop-blur-lg"
+            ? "top-0 bg-[#000000] opacity-[.7] backdrop-blur-lg"
             : "bg-[#000000]"
         } z-30 transition-all`}
       >

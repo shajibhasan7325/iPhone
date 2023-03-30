@@ -8,26 +8,66 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video: any = videoRef.current;
+
+    const rotateAfterSeconds = 1.86;
+    const rotateAngle = -55;
+
+    const handleTimeUpdate = () => {
+      if (video.currentTime >= rotateAfterSeconds) {
+        video.style.transform = `rotateZ(${rotateAngle}deg) `;
+        // video.style.transform = `rotateX(45deg) `;
+        video.removeEventListener("timeupdate", handleTimeUpdate);
+      }
+    };
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, []);
   return (
     <Layout>
       {/* Hero section */}
       <div className="bg-scroll ">
         <div className="m-auto max-w-screen-lg ">
-          <div className=" z-10 mt-[72px] text-center decoration-[#f5f5f7] ">
+          <div className="  text-center decoration-[#f5f5f7] ">
             <h1 className=" mb-2 font-semibold md:text-[24px]">
               iPhone 12 Pro
             </h1>
             <h2 className=" text-[56px] font-semibold md:text-[80px]">
               Its a leap year.
             </h2>
-            <video autoPlay muted width={1000}>
-              <source src="/hero.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div
+              style={{
+                transformStyle: "preserve-3d",
+              }}
+              className="overflow-hidden"
+            >
+              <video
+                autoPlay
+                muted
+                width={800}
+                ref={videoRef}
+                // style={{ transform: "rotateZ(-65deg)" }}
+                style={{
+                  transition: "transform 0.5s ease",
+                  // transform: "rotateX(45deg)",
+                }}
+                className="mx-auto -mt-32"
+                src="/hero.mp4"
+                // type="video/mp4"
+              />
+            </div>
 
-            <h3 className="mx-auto w-4/6 text-2xl font-bold text-[#a1a1a6]">
+            <h3 className="mx-auto w-4/6 text-2xl font-semibold text-[#a1a1a6]">
               5G goes Pro. A14 Bionic rockets past every other smartphone chip.
               The Pro camera system takes low-light photography to the next
               level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic
@@ -35,16 +75,16 @@ export default function Home() {
               this thing can do.
             </h3>
 
-            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-[#a1a1a6]">
+            <h3 className="mx-auto mt-[50px] w-4/6 text-xl font-semibold text-[#a1a1a6]">
               iPhone 12 Pro available 10.23 | Pre-order iPhone 12 Pro Max 11.6
             </h3>
-            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-[#a1a1a6]">
+            <h3 className="mx-auto mt-[50px] w-4/6 text-xl font-semibold text-[#a1a1a6]">
               From $41.62/mo. or $999 before trade‑in
             </h3>
           </div>
           {/* Hasans code will be here */}
           {/* Less bezel */}
-          <div className="bg-scroll pb-[10rem]">
+          <div className="bg-scroll ">
             <div className="pt-[180px]">
               <div className="m-auto max-w-screen-lg ">
                 <div>
@@ -98,11 +138,17 @@ export default function Home() {
             </div>
           </div>
           {/* Hasans code will be here */}
-          <div>
-            <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
+          <div className=" mt-[150px] text-center">
+            <h3 className="text-center text-[56px] font-semibold ">
               Kicks glass.
             </h3>
-            <img src="/mobile.jpeg" className="mx-auto" alt="" />
+            <Image
+              src="/mobile.jpeg"
+              width={700}
+              height={700}
+              alt=""
+              className=" my-[45px] mx-auto hidden md:block"
+            />
             <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
               Ceramic Shield, tougher than any smartphone glass
             </h3>
