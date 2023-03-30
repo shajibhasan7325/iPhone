@@ -42,6 +42,26 @@ export default function Home() {
             </h3>
           </div>
           {/* Hasans code will be here */}
+          {/* Less bezel */}
+          <div className="bg-scroll pb-[10rem]">
+            <div className="pt-[180px]">
+              <div className="m-auto max-w-screen-lg ">
+                <div>
+                  <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
+                    Less bezel, more screen.
+                  </h3>
+                </div>
+                <Image
+                  className="shadow-[0 -20px 30px 0 #000] mx-auto mt-[62px]"
+                  src="/less.jpg"
+                  width={500}
+                  height={600}
+                  alt="img"
+                />
+              </div>
+            </div>
+          </div>
+          {/* Hasans code will be here */}
           <div>
             <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
               Kicks glass.
@@ -101,25 +121,24 @@ export default function Home() {
               className="absolute top-20 left-1/2  w-[34rem] -translate-x-1/2"
               alt=""
             />
-          </div>
-        </div>
-      </div>
-      {/* Less bezel */}
-      <div className="bg-scroll ">
-        <div className="pt-[180px]">
-          <div className="m-auto max-w-screen-lg ">
-            <div>
-              <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
-                Less bezel, more screen.
-              </h3>
-            </div>
-            <Image
-              className=" shadow-[0 -20px 30px 0 #000] mt-[62px]"
-              src="/less.jpg"
-              width={1000}
-              height={600}
-              alt="img"
-            />
+            <ul className="absolute top-20 left-1/2 w-[34rem] -translate-x-1/2 translate-y-1/2 space-y-4">
+              <li className=" flex items-center">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+              <li className=" flex items-center">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+              <li className="flex items-center">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+              <li className="flex items-center">
+                <img src="/list-item-1.jpeg" className="" alt="" />
+                <img src="/arrow.jpg" className="w-6" alt="" />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
