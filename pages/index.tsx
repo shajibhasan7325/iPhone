@@ -25,6 +25,12 @@ export default function Home() {
           <div></div>
         </div>
       </div>
+      {/* Less bezel */}
+      <div className="bg-scroll ">
+        <div className="pt-[180px]">
+          <div className="m-auto max-w-screen-lg "></div>
+        </div>
+      </div>
     </Layout>
   );
 }
