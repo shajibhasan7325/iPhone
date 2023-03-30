@@ -16,12 +16,12 @@ export default function Home() {
     const video: any = videoRef.current;
 
     const rotateAfterSeconds = 1.86;
-    const rotateAngle = -55;
+    const rotateAngle = -65;
 
     const handleTimeUpdate = () => {
       if (video.currentTime >= rotateAfterSeconds) {
         video.style.transform = `rotateZ(${rotateAngle}deg) `;
-        // video.style.transform = `rotateX(45deg) `;
+        // video.style.transform = `rotateX(-45deg) `;
         video.removeEventListener("timeupdate", handleTimeUpdate);
       }
     };
@@ -60,13 +60,13 @@ export default function Home() {
                   transition: "transform 0.5s ease",
                   // transform: "rotateX(45deg)",
                 }}
-                className="mx-auto -mt-32"
+                className="mx-auto -mt-12"
                 src="/hero.mp4"
                 // type="video/mp4"
               />
             </div>
 
-            <h3 className="mx-auto w-4/6 text-2xl font-bold text-gray-400">
+            <h3 className="mx-auto w-4/6 text-2xl font-bold text-[#a1a1a6]">
               5G goes Pro. A14 Bionic rockets past every other smartphone chip.
               The Pro camera system takes low-light photography to the next
               level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic
@@ -74,10 +74,10 @@ export default function Home() {
               this thing can do.
             </h3>
 
-            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-gray-400">
+            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-[#a1a1a6]">
               iPhone 12 Pro available 10.23 | Pre-order iPhone 12 Pro Max 11.6
             </h3>
-            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-gray-400">
+            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-[#a1a1a6]">
               From $41.62/mo. or $999 before trade‑in
             </h3>
           </div>
@@ -98,6 +98,41 @@ export default function Home() {
                   height={600}
                   alt="img"
                 />
+              </div>
+            </div>
+          </div>
+          {/* video 3  */}
+          <div className="bg-scroll pb-[10rem]">
+            <div className="m-auto max-w-screen-lg ">
+              <div className="flex items-center justify-between">
+                <div className=" text-[17px] text-[#fff]">
+                  iPhone 12 Pro Max
+                  <div className=" text-[#aaa]">
+                    6.7” Super Retina <br />
+                    XDR display
+                  </div>
+                </div>
+                <div>
+                  {" "}
+                  <video autoPlay muted width={400} height={400}>
+                    <source src="/video4.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+
+                <div className=" text-[17px] text-[#fff]">
+                  iPhone 12 Pro Max
+                  <div className=" text-[#aaa]">
+                    6.7” Super Retina <br />
+                    XDR display
+                  </div>
+                </div>
+              </div>
+              {/* button */}
+              <div className="text-center">
+                <button className="learn-more-button hover:bg-[#8F8F8F] hover:text-black">
+                  Compare sizes to iPhone 11 Pro
+                </button>
               </div>
             </div>
           </div>
@@ -140,16 +175,17 @@ export default function Home() {
             <source src="/iphone.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <h3 className="text-4xl font-bold">Four finishing touches.</h3>
-          <p className=" text-2xl leading-loose text-gray-400">
+
+          {/* <h3 className="text-4xl font-bold">Four finishing touches.</h3>
+          <p className="text-2xl leading-loose text-gray-400 ">
             Pacific Blue, Gold, Silver, and Graphite
-          </p>
+          </p> */}
         </div>
         <div className="mt-12 text-center">
           <h3 className="text-6xl font-bold text-gray-400">
             Superfast wireless{" "}
           </h3>
-          <h3 className="text-6xl font-bold  leading-loose">Hello 5G.</h3>
+          <h3 className="text-6xl font-bold leading-loose">Hello 5G.</h3>
           <div className="relative">
             <img
               src="/frame.jpeg"
@@ -162,11 +198,11 @@ export default function Home() {
               alt=""
             />
             <ul className="absolute top-20 left-1/2 w-[34rem] -translate-x-1/2 translate-y-1/2 space-y-4">
-              <li className=" flex items-center">
+              <li className="flex items-center ">
                 <img src="/list-item-1.jpeg" className="" alt="" />
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </li>
-              <li className=" flex items-center">
+              <li className="flex items-center ">
                 <img src="/list-item-1.jpeg" className="" alt="" />
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </li>
