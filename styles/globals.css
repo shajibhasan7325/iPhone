@@ -34,4 +34,27 @@ body {
     transition: color 350ms ease-in-out, background-color 350ms ease-in-out;
     line-height: 1.17064;
   }
+  .design-glass-subheading {
+    width: 45%;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    background-image: linear-gradient(90deg, #005e7f, #61b6cd);
+    font-size: 32px;
+    line-height: 1.12;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .learn-more-button {
+    margin-top: 64px;
+    padding: 8px 16px;
+    border: 1px solid #f5f5f7;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: color 350ms ease-in-out, background-color 350ms ease-in-out;
+    line-height: 1.17064;
+    border-color: #61b6cd;
+  }
 }

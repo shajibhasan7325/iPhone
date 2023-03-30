@@ -149,31 +149,29 @@ export default function Home() {
               alt=""
               className=" my-[45px] mx-auto hidden md:block"
             />
-            <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
+            <p className="design-glass-subheading ">
               Ceramic Shield, tougher than any smartphone glass
-            </h3>
-            <button className="mx-auto rounded-full border bg-transparent px-4">
-              Find out how
-            </button>
+            </p>
+            <button className="learn-more-button">Find out how</button>
           </div>
         </div>
-        <div className="relative">
-          <h3 className="absolute top-64 left-48 rotate-90 text-4xl font-bold">
+        <div className="relative mt-[225px]">
+          <h3 className="absolute top-64 left-48 rotate-90 text-[56px] font-semibold">
             Surgical-grade
           </h3>
           <img src="/canvas.png" className="mx-auto" alt="" />
-          <h3 className="absolute top-[40rem] right-48 rotate-90 text-4xl font-bold">
+          <h3 className="absolute top-[40rem] right-48 rotate-90 text-[56px] font-semibold">
             stainless steel.
           </h3>
         </div>
-        <div className="container flex items-center">
+        <div className="container flex items-center pb-[150px]">
           <div className="w-1/3">
             <h3 className="text-4xl font-bold">
               Blows other phones out of the water.
             </h3>
             <p>Industry‑leading IP68 water resistance</p>
           </div>
-          <div className="w-2/3">
+          <div className="w-full">
             <img src="/waterfall.jpeg" alt="" />
           </div>
         </div>
