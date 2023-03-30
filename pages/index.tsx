@@ -16,12 +16,28 @@ export default function Home() {
         <div className="m-auto max-w-screen-lg ">
           <div className=" z-10 mt-[72px] text-center decoration-[#f5f5f7] ">
             <h1>iPhone 12 Pro</h1>
-            <h2>Its a leap year.</h2>
-            {/* animation  */}
+            <h2 className="text-2xl font-bold md:text-6xl">Its a leap year.</h2>
+            <video autoPlay muted width={1000}>
+              <source src="/hero.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-            <div></div>
+            <h3 className="mx-auto w-4/6 text-2xl font-bold text-gray-400">
+              5G goes Pro. A14 Bionic rockets past every other smartphone chip.
+              The Pro camera system takes low-light photography to the next
+              level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic
+              Shield delivers four times better drop performance. Let’s see what
+              this thing can do.
+            </h3>
+
+            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-gray-400">
+              iPhone 12 Pro available 10.23 | Pre-order iPhone 12 Pro Max 11.6
+            </h3>
+            <h3 className="mx-auto my-4 w-4/6 text-xl font-bold text-gray-400">
+              From $41.62/mo. or $999 before trade‑in
+            </h3>
           </div>
-          {/* animation Img */}
+
           <div></div>
         </div>
       </div>
