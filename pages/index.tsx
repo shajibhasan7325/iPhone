@@ -15,8 +15,12 @@ export default function Home() {
       <div className="bg-scroll ">
         <div className="m-auto max-w-screen-lg ">
           <div className=" z-10 mt-[72px] text-center decoration-[#f5f5f7] ">
-            <h1>iPhone 12 Pro</h1>
-            <h2 className="text-2xl font-bold md:text-6xl">Its a leap year.</h2>
+            <h1 className=" mb-2 font-semibold md:text-[24px]">
+              iPhone 12 Pro
+            </h1>
+            <h2 className=" text-[56px] font-semibold md:text-[80px]">
+              Its a leap year.
+            </h2>
             <video autoPlay muted width={1000}>
               <source src="/hero.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -96,6 +100,25 @@ export default function Home() {
               src="/topscreen.jpg"
               className="absolute top-20 left-1/2  w-[34rem] -translate-x-1/2"
               alt=""
+            />
+          </div>
+        </div>
+      </div>
+      {/* Less bezel */}
+      <div className="bg-scroll ">
+        <div className="pt-[180px]">
+          <div className="m-auto max-w-screen-lg ">
+            <div>
+              <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
+                Less bezel, more screen.
+              </h3>
+            </div>
+            <Image
+              className=" shadow-[0 -20px 30px 0 #000] mt-[62px]"
+              src="/less.jpg"
+              width={1000}
+              height={600}
+              alt="img"
             />
           </div>
         </div>
