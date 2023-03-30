@@ -37,8 +37,67 @@ export default function Home() {
               From $41.62/mo. or $999 before trade‑in
             </h3>
           </div>
-
-          <div></div>
+          {/* Hasans code will be here */}
+          <div>
+            <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
+              Kicks glass.
+            </h3>
+            <img src="/mobile.jpeg" className="mx-auto" alt="" />
+            <h3 className="mx-auto my-4 w-4/6 text-center text-2xl font-bold ">
+              Ceramic Shield, tougher than any smartphone glass
+            </h3>
+            <button className="mx-auto rounded-full border bg-transparent px-4">
+              Find out how
+            </button>
+          </div>
+        </div>
+        <div className="relative">
+          <h3 className="absolute top-64 left-48 rotate-90 text-4xl font-bold">
+            Surgical-grade
+          </h3>
+          <img src="/canvas.png" className="mx-auto" alt="" />
+          <h3 className="absolute top-[40rem] right-48 rotate-90 text-4xl font-bold">
+            stainless steel.
+          </h3>
+        </div>
+        <div className="container flex items-center">
+          <div className="w-1/3">
+            <h3 className="text-4xl font-bold">
+              Blows other phones out of the water.
+            </h3>
+            <p>Industry‑leading IP68 water resistance</p>
+          </div>
+          <div className="w-2/3">
+            <img src="/waterfall.jpeg" alt="" />
+          </div>
+        </div>
+        <div className="text-center">
+          <video autoPlay muted width={1000} className="mx-auto">
+            <source src="/iphone.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <h3 className="text-4xl font-bold">Four finishing touches.</h3>
+          <p className=" text-2xl leading-loose text-gray-400">
+            Pacific Blue, Gold, Silver, and Graphite
+          </p>
+        </div>
+        <div className="mt-12 text-center">
+          <h3 className="text-6xl font-bold text-gray-400">
+            Superfast wireless{" "}
+          </h3>
+          <h3 className="text-6xl font-bold  leading-loose">Hello 5G.</h3>
+          <div className="relative">
+            <img
+              src="/frame.jpeg"
+              className="mx-auto w-1/2 object-cover"
+              alt=""
+            />
+            <img
+              src="/topscreen.jpg"
+              className="absolute top-20 left-1/2  w-[34rem] -translate-x-1/2"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </Layout>
