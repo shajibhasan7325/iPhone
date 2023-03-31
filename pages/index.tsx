@@ -39,10 +39,10 @@ export default function Home() {
       <div className="bg-scroll ">
         <div className="m-auto max-w-screen-lg ">
           <div className="  text-center decoration-[#f5f5f7] ">
-            <h1 className=" mb-2 font-semibold md:text-[24px]">
+            <h1 className=" mb-2 font-semibold text-[#f5f5f5] md:text-[24px]">
               iPhone 12 Pro
             </h1>
-            <h2 className=" text-[56px] font-semibold md:text-[80px]">
+            <h2 className=" text-[56px] font-semibold text-[#f5f5f5] md:text-[80px]">
               Its a leap year.
             </h2>
             <div
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="bg-scroll pb-[10rem]">
             <div className="m-auto max-w-screen-lg ">
               <div className="flex items-center justify-between">
-                <div className=" text-[17px] text-[#fff]">
+                <div className=" text-[17px] font-semibold text-[#fff]">
                   iPhone 12 Pro Max
                   <div className=" text-[#aaa]">
                     6.7” Super Retina <br />
@@ -121,7 +121,7 @@ export default function Home() {
                   </video>
                 </div>
 
-                <div className=" text-[17px] text-[#fff]">
+                <div className=" text-[17px] font-semibold text-[#fff]">
                   iPhone 12 Pro Max
                   <div className=" text-[#aaa]">
                     6.7” Super Retina <br />
@@ -164,36 +164,50 @@ export default function Home() {
             stainless steel.
           </h3>
         </div>
-        <div className="container flex items-center pb-[150px]">
-          <div className="w-1/3">
-            <h3 className="text-4xl font-bold">
-              Blows other phones out of the water.
-            </h3>
-            <p>Industry‑leading IP68 water resistance</p>
-          </div>
-          <div className="w-full">
-            <img src="/waterfall.jpeg" alt="" />
+        <div className="bg-scroll pb-[150px]">
+          <div className="m-auto max-w-screen-lg ">
+            <div className="container flex items-center ">
+              <div className="w-1/3">
+                <h3 className="text-[56px] font-semibold leading-[67px]">
+                  Blows other phones out of the water.
+                </h3>
+                <p className=" text-[21px] font-[600] text-[#a1a1a6]">
+                  Industry‑leading IP68 water resistance
+                </p>
+              </div>
+              <div className="w-2/3">
+                <img src="/waterfall.jpeg" alt="" />
+              </div>
+            </div>
           </div>
         </div>
+
         <div className="text-center">
           <video autoPlay muted width={1000} className="mx-auto">
             <source src="/iphone.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <h3 className="text-4xl font-bold">Four finishing touches.</h3>
-          <p className="text-2xl leading-loose text-gray-400 ">
+          <h3 className="mt-[55px] text-[56px] font-semibold leading-[67px]">
+            Four finishing touches.
+          </h3>
+          <p className="mt-[24px] text-[21px] font-semibold leading-[25px] text-[#a1a1a6]">
             Pacific Blue, Gold, Silver, and Graphite
           </p>
         </div>
-        <div className="mt-12 text-center">
-          <h3 className="text-6xl font-bold text-gray-400">
-            Superfast wireless{" "}
-          </h3>
-          <h3 className="text-6xl font-bold leading-loose">Hello 5G.</h3>
+        <div className="mt-[425px] text-center">
+          <div className="mb-[115px]">
+            <h3 className="text-[80px] font-semibold leading-[96px] text-[#6e6e73]">
+              Superfast wireless
+            </h3>
+            <h3 className="text-[80px] font-semibold leading-[96px] text-[#fff]">
+              Hello 5G.
+            </h3>
+          </div>
+
           <div className="relative">
             <img
               src="/frame.jpeg"
-              className="mx-auto w-1/2 object-cover"
+              className="mx-auto w-[70%] object-cover"
               alt=""
             />
             <img
