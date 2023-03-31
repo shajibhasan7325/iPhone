@@ -57,4 +57,15 @@ body {
     line-height: 1.17064;
     border-color: #61b6cd;
   }
+  .iphone-nav {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .hero-video-wrap {
+    position: relative;
+    left: 24px;
+    top: -27px;
+    z-index: -1;
+    /* width: 1352px; */
+  }
 }

@@ -36,9 +36,9 @@ export default function Layout({
       <div
         className={`fixed top-12 w-full ${
           scrolled
-            ? "top-0 bg-[#000000] opacity-[.7] backdrop-blur-lg"
+            ? "iphone-nav top-0 bg-[#010A1B] text-[#fff] opacity-[.7]"
             : "bg-[#000000]"
-        } z-30 transition-all`}
+        } z-30 `}
       >
         <NavBar />
       </div>

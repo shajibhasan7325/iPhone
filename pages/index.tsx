@@ -39,29 +39,29 @@ export default function Home() {
       <div className="bg-scroll ">
         <div className="m-auto max-w-screen-lg ">
           <div className="  text-center decoration-[#f5f5f7] ">
-            <h1 className=" mb-2 font-semibold text-[#f5f5f5] md:text-[24px]">
+            <h1 className=" mb-2 font-semibold leading-[29px] text-[#f5f5f5] md:text-[24px]">
               iPhone 12 Pro
             </h1>
-            <h2 className=" text-[56px] font-semibold text-[#f5f5f5] md:text-[80px]">
+            <h2 className=" text-[56px] font-semibold leading-[88px] text-[#f5f5f5] md:text-[80px]">
               Its a leap year.
             </h2>
             <div
               style={{
                 transformStyle: "preserve-3d",
               }}
-              className="overflow-hidden"
+              className="relative overflow-hidden"
             >
               <video
                 autoPlay
                 muted
-                width={800}
+                width={2000}
                 ref={videoRef}
                 // style={{ transform: "rotateZ(-65deg)" }}
                 style={{
                   transition: "transform 0.5s ease",
                   // transform: "rotateX(45deg)",
                 }}
-                className="mx-auto -mt-32"
+                className="hero-video-wrap mx-auto -mt-32"
                 src="/hero.mp4"
                 // type="video/mp4"
               />
@@ -95,7 +95,7 @@ export default function Home() {
                 <Image
                   className="shadow-[0 -20px 30px 0 #000] mx-auto mt-[62px]"
                   src="/less.jpg"
-                  width={500}
+                  width={750}
                   height={600}
                   alt="img"
                 />
