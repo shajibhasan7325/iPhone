@@ -18,7 +18,7 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 0.6 },
 };
 const boxVariant2 = {
-  visible: { opacity: 1, transition: { delay: 0.8, duration: 0.5 } },
+  visible: { opacity: 1, transition: { delay: 0.5, duration: 0.5 } },
   hidden: { opacity: 0 },
 };
 
@@ -61,7 +61,7 @@ export default function Home() {
     <Layout>
       {/* Hero section */}
       <div className="bg-scroll ">
-        <div className="m-auto max-w-screen-lg ">
+        <div className="max-w-screen-lg m-auto ">
           <div className="  text-center decoration-[#f5f5f7] ">
             <motion.div
               variants={boxVariant}
@@ -92,7 +92,7 @@ export default function Home() {
                   transition: "transform 0.5s ease",
                   // transform: "rotateX(45deg)",
                 }}
-                className="hero-video-wrap mx-auto -mt-32"
+                className="mx-auto hero-video-wrap md:-mt-32"
                 src="/hero.mp4"
                 // type="video/mp4"
               />
@@ -117,7 +117,7 @@ export default function Home() {
           {/* Less bezel */}
           <div className="bg-scroll ">
             <div className="pt-[180px]">
-              <div className="m-auto max-w-screen-lg ">
+              <div className="max-w-screen-lg m-auto ">
                 <motion.div
                   ref={ref}
                   variants={boxVariant2}
@@ -140,10 +140,10 @@ export default function Home() {
           </div>
           {/* video 3  */}
           <div className="bg-scroll pb-[10rem]">
-            <div className="m-auto max-w-screen-lg ">
+            <div className="max-w-screen-lg m-auto ">
               <div className="flex items-center justify-between">
                 <motion.div
-                  className=" text-[17px] font-semibold text-[#fff]"
+                  className=" hidden text-[17px] font-semibold text-[#fff] md:block"
                   ref={ref}
                   variants={boxVariant2}
                   initial="hidden"
@@ -156,15 +156,14 @@ export default function Home() {
                   </div>
                 </motion.div>
                 <div>
-                  {" "}
-                  <video autoPlay muted className="just-vide">
+                  <video autoPlay muted className=" h-[650px] px-10 md:px-0">
                     <source src="/video4.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
 
                 <motion.div
-                  className=" text-[17px] font-semibold text-[#fff]"
+                  className=" hidden text-[17px] font-semibold text-[#fff] md:block"
                   ref={ref}
                   variants={boxVariant2}
                   initial="hidden"
@@ -176,6 +175,23 @@ export default function Home() {
                     XDR display
                   </div>
                 </motion.div>
+              </div>
+              {/* Mobile View only */}
+              <div className="flex justify-between p-10 md:hidden">
+                <div className="  text-[14px] font-semibold text-[#fff] ">
+                  iPhone 12 Pro Max
+                  <div className=" text-[#aaa]">
+                    6.7” Super Retina <br />
+                    XDR display
+                  </div>
+                </div>
+                <div className=" text-[14px] font-semibold text-[#fff] ">
+                  iPhone 12 Pro Max
+                  <div className=" text-[#aaa]">
+                    6.7” Super Retina <br />
+                    XDR display
+                  </div>
+                </div>
               </div>
               {/* button */}
               <div className="text-center">
@@ -210,13 +226,13 @@ export default function Home() {
           <h3 className="absolute top-64 left-48 rotate-90 text-4xl font-semibold md:text-[56px]">
             Surgical-grade
           </h3>
-          <img src="/canvas.png" className="mx-auto w-1/6" alt="" />
+          <img src="/canvas.png" className="w-1/6 mx-auto" alt="" />
           <h3 className="absolute top-[40rem] right-48 rotate-90 text-4xl font-semibold md:text-[56px]">
             stainless steel.
           </h3>
         </div>
         <div className="bg-scroll pb-[150px]">
-          <div className="m-auto max-w-screen-lg ">
+          <div className="max-w-screen-lg m-auto ">
             <div className="container flex items-center ">
               <div className="w-1/3">
                 <h3 className="text-[56px] font-semibold leading-[67px]">
@@ -226,7 +242,7 @@ export default function Home() {
                   Industry‑leading IP68 water resistance
                 </p>
               </div>
-              <div className="-mt-5 w-2/3">
+              <div className="w-2/3 -mt-5">
                 <Image
                   width={1000}
                   height={800}
@@ -274,7 +290,7 @@ export default function Home() {
             />
             <ul className="absolute top-2 left-1/2 -translate-x-1/2 translate-y-1/2 space-y-4 md:w-[34rem]">
               <motion.li
-                className="box flex items-center"
+                className="flex items-center box"
                 initial={{ opacity: 0, scale: 1.4 }}
                 whileInView={{ opacity: 1, scale: 1 }}
               >
@@ -282,7 +298,7 @@ export default function Home() {
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </motion.li>
               <motion.li
-                className="box flex items-center"
+                className="flex items-center box"
                 // transition={{ duration: 0.5 }}
                 initial={{ opacity: 0, scale: 1.4 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -291,7 +307,7 @@ export default function Home() {
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </motion.li>
               <motion.li
-                className="box flex items-center"
+                className="flex items-center box"
                 initial={{ opacity: 0, scale: 1.4 }}
                 whileInView={{ opacity: 1, scale: 1 }}
               >
@@ -299,7 +315,7 @@ export default function Home() {
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </motion.li>
               <motion.li
-                className="box flex items-center"
+                className="flex items-center box"
                 // transition={{ duration: 0.5 }}
                 initial={{ opacity: 0, scale: 1.4 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -308,7 +324,7 @@ export default function Home() {
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </motion.li>
               <motion.li
-                className="box flex items-center"
+                className="flex items-center box"
                 transition={{ duration: 0.5 }}
                 initial={{ y: 30, opacity: 0, scale: 1.4 }}
                 // animate={{ y: 0 }}
@@ -318,7 +334,7 @@ export default function Home() {
                 <img src="/arrow.jpg" className="w-6" alt="" />
               </motion.li>
               <motion.li
-                className="box flex items-center"
+                className="flex items-center box"
                 transition={{ duration: 0.5 }}
                 initial={{ y: 60, opacity: 0, scale: 1.4 }}
                 // animate={{ y: 0 }}
