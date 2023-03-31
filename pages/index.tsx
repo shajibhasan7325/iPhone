@@ -68,10 +68,10 @@ export default function Home() {
               initial="hidden"
               animate="visible"
             >
-              <h1 className=" mb-2 font-semibold leading-[29px] text-[#f5f5f5] md:text-[24px]">
+              <h1 className=" mb-2 text-[24px] font-semibold leading-[29px] text-[#f5f5f5]">
                 iPhone 12 Pro
               </h1>
-              <h2 className=" text-[56px] font-semibold leading-[88px] text-[#f5f5f5] md:text-[80px]">
+              <h2 className=" text-[56px] font-semibold text-[#f5f5f5] md:text-[80px] md:leading-[88px]">
                 Its a leap year.
               </h2>
             </motion.div>
@@ -202,24 +202,38 @@ export default function Home() {
             </div>
           </div>
           {/* Hasans code will be here */}
-          <div className=" mt-[150px] text-center">
-            <h3 className="text-center text-[56px] font-semibold ">
+          <div className=" mt-[150px] md:text-center">
+            <h3 className="hidden text-center text-[56px] font-semibold md:block ">
               Kicks glass.
             </h3>
-            <div className="img-for-rote">
+            <div className="hidden img-for-rote md:block">
               <Image
                 src="/mobile.jpeg"
                 width={1500}
                 height={1000}
                 alt=""
-                className=" my-[45px] mx-auto hidden md:block"
+                className=" my-[45px] mx-auto"
               />
             </div>
+            {/* image for mobile */}
+            <div className="mt-[45px] px-10 md:hidden">
+              <Image src="/pn.jpg" width={433} height={683} alt="" />
 
-            <p className="design-glass-subheading ">
-              Ceramic Shield, tougher than any smartphone glass
-            </p>
-            <button className="learn-more-button">Find out how</button>
+              <h3 className="text-[32px] font-semibold  ">Kicks glass.</h3>
+              <p className="design-glass-subheading-phone ">
+                Ceramic Shield, tougher than any smartphone glass
+              </p>
+              <button className="learn-more-button">Find out how</button>
+            </div>
+            {/* end for mobile */}
+            <div className="hidden ">
+              <p className=" design-glass-subheading">
+                Ceramic Shield, tougher than any smartphone glass
+              </p>
+              <button className="learn-more-button mt-[64px]">
+                Find out how
+              </button>
+            </div>
           </div>
         </div>
         <div className="relative my-[225px]">
