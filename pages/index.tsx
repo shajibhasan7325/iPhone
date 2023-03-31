@@ -1,14 +1,20 @@
-import Card from "@/components/home/card";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Layout from "@/components/layout";
-import Balancer from "react-wrap-balancer";
-import { motion } from "framer-motion";
-import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+
+// animation
+const boxVariant = {
+  visible: { opacity: 1, transition: { delay: 4.5 } },
+  hidden: { opacity: 0 },
+};
+const boxVariant2 = {
+  visible: { opacity: 1, transition: { delay: 0.8, duration: 0.5 } },
+  hidden: { opacity: 0 },
+};
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -33,18 +39,37 @@ export default function Home() {
       video.removeEventListener("timeupdate", handleTimeUpdate);
     };
   }, []);
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <Layout>
       {/* Hero section */}
       <div className="bg-scroll ">
         <div className="m-auto max-w-screen-lg ">
           <div className="  text-center decoration-[#f5f5f7] ">
-            <h1 className=" mb-2 font-semibold leading-[29px] text-[#f5f5f5] md:text-[24px]">
-              iPhone 12 Pro
-            </h1>
-            <h2 className=" text-[56px] font-semibold leading-[88px] text-[#f5f5f5] md:text-[80px]">
-              Its a leap year.
-            </h2>
+            <motion.div
+              variants={boxVariant}
+              initial="hidden"
+              animate="visible"
+            >
+              <h1 className=" mb-2 font-semibold leading-[29px] text-[#f5f5f5] md:text-[24px]">
+                iPhone 12 Pro
+              </h1>
+              <h2 className=" text-[56px] font-semibold leading-[88px] text-[#f5f5f5] md:text-[80px]">
+                Its a leap year.
+              </h2>
+            </motion.div>
+
             <div
               style={{
                 transformStyle: "preserve-3d",
@@ -87,11 +112,16 @@ export default function Home() {
           <div className="bg-scroll ">
             <div className="pt-[180px]">
               <div className="m-auto max-w-screen-lg ">
-                <div>
+                <motion.div
+                  ref={ref}
+                  variants={boxVariant2}
+                  initial="hidden"
+                  animate={control}
+                >
                   <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
                     Less bezel, more screen.
                   </h3>
-                </div>
+                </motion.div>
                 <Image
                   className="shadow-[0 -20px 30px 0 #000] mx-auto mt-[62px]"
                   src="/less.jpg"
@@ -106,28 +136,40 @@ export default function Home() {
           <div className="bg-scroll pb-[10rem]">
             <div className="m-auto max-w-screen-lg ">
               <div className="flex items-center justify-between">
-                <div className=" text-[17px] font-semibold text-[#fff]">
+                <motion.div
+                  className=" text-[17px] font-semibold text-[#fff]"
+                  ref={ref}
+                  variants={boxVariant2}
+                  initial="hidden"
+                  animate={control}
+                >
                   iPhone 12 Pro Max
                   <div className=" text-[#aaa]">
                     6.7” Super Retina <br />
                     XDR display
                   </div>
-                </div>
+                </motion.div>
                 <div>
                   {" "}
-                  <video autoPlay muted width={400} height={400}>
+                  <video autoPlay muted className="just-vide">
                     <source src="/video4.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
 
-                <div className=" text-[17px] font-semibold text-[#fff]">
+                <motion.div
+                  className=" text-[17px] font-semibold text-[#fff]"
+                  ref={ref}
+                  variants={boxVariant2}
+                  initial="hidden"
+                  animate={control}
+                >
                   iPhone 12 Pro Max
                   <div className=" text-[#aaa]">
                     6.7” Super Retina <br />
                     XDR display
                   </div>
-                </div>
+                </motion.div>
               </div>
               {/* button */}
               <div className="text-center">
@@ -142,13 +184,16 @@ export default function Home() {
             <h3 className="text-center text-[56px] font-semibold ">
               Kicks glass.
             </h3>
-            <Image
-              src="/mobile.jpeg"
-              width={700}
-              height={700}
-              alt=""
-              className=" my-[45px] mx-auto hidden md:block"
-            />
+            <div className="img-for-rote">
+              <Image
+                src="/mobile.jpeg"
+                width={1500}
+                height={1000}
+                alt=""
+                className=" my-[45px] mx-auto hidden md:block"
+              />
+            </div>
+
             <p className="design-glass-subheading ">
               Ceramic Shield, tougher than any smartphone glass
             </p>
@@ -175,8 +220,14 @@ export default function Home() {
                   Industry‑leading IP68 water resistance
                 </p>
               </div>
-              <div className="w-2/3">
-                <img src="/waterfall.jpeg" alt="" />
+              <div className="-mt-5 w-2/3">
+                <Image
+                  width={1000}
+                  height={800}
+                  src="/waterfall.jpeg"
+                  style={{ objectFit: "cover" }}
+                  alt=""
+                />
               </div>
             </div>
           </div>
