@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import Image from "next/image";
 import Hero from "./Hero";
-import { OpacityEffectAfter } from "src/utils/RSParallax";
+import { OpacityEffectAfter, OpacityEffectBefore } from "src/utils/RSParallax";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 interface Props {
@@ -128,18 +128,39 @@ const Index = (props: Props) => {
               </div>
             </div>
             {/* button */}
-            <div className="text-center">
-              <button className="learn-more-button hover:bg-[#8F8F8F] hover:text-black">
-                Compare sizes to iPhone 11 Pro
-              </button>
-            </div>
+            <ParallaxBanner
+              layers={[
+                OpacityEffectBefore(
+                  <>
+                    <div className="text-center">
+                      <button className="learn-more-button hover:bg-[#8F8F8F] hover:text-black">
+                        Compare sizes to iPhone 11 Pro
+                      </button>
+                    </div>
+                  </>,
+                ),
+              ]}
+              className="h-[150px]"
+            />
           </div>
         </div>
-        {/* Hasans code will be here */}
         <div className=" mt-[150px] md:text-center">
-          <h3 className="hidden text-center text-[56px] font-semibold md:block ">
+          {/* <h3 className="hidden text-center text-[56px] font-semibold md:block ">
             Kicks glass.
-          </h3>
+          </h3> */}
+
+          <ParallaxBanner
+            layers={[
+              OpacityEffectAfter(
+                <>
+                  <h3 className="hidden text-center text-[56px] font-semibold md:block ">
+                    Kicks glass.
+                  </h3>
+                </>,
+              ),
+            ]}
+            className=" h-[80px]"
+          />
           <div className="hidden img-for-rote md:block">
             <Image
               src="/mobile.jpeg"
@@ -160,14 +181,24 @@ const Index = (props: Props) => {
             <button className="learn-more-button">Find out how</button>
           </div>
           {/* end for mobile */}
-          <div className="hidden ">
-            <p className=" design-glass-subheading">
-              Ceramic Shield, tougher than any smartphone glass
-            </p>
-            <button className="learn-more-button mt-[64px]">
-              Find out how
-            </button>
-          </div>
+
+          <ParallaxBanner
+            layers={[
+              OpacityEffectBefore(
+                <>
+                  <div className="hidden md:block">
+                    <p className=" design-glass-subheading">
+                      Ceramic Shield, tougher than any smartphone glass
+                    </p>
+                    <button className="learn-more-button mt-[64px]">
+                      Find out how
+                    </button>
+                  </div>
+                </>,
+              ),
+            ]}
+            className="h-[200px]"
+          />
         </div>
       </div>
       <div className="relative my-[225px]">
