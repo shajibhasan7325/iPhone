@@ -6,10 +6,10 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/pages/*": ["pages/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["src/styles/*"]
     },
     "strict": true,
     "forceConsistentCasingInFileNames": true,
