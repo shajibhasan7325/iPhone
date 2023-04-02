@@ -50,7 +50,7 @@ const Index = (props: Props) => {
         {/* video 3  */}
         <div className="bg-scroll pb-[10rem]">
           <div className="max-w-screen-lg m-auto ">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center content-center justify-between">
               {/* <div
                 className=" hidden text-[17px] font-semibold text-[#fff] md:block"
                 ref={ref}
@@ -65,12 +65,12 @@ const Index = (props: Props) => {
                 </div>
               </div> */}
 
-              <div className="h-[150px] w-96">
+              <div className="hidden h-[250px] w-[200px] md:block">
                 <ParallaxBanner
                   layers={[
                     OpacityEffectAfter(
                       <>
-                        <div className=" hidden text-[17px] font-semibold text-[#fff] md:block">
+                        <div className="text-[22px] font-semibold text-[#fff]">
                           iPhone 12 Pro Max
                           <div className=" text-[#aaa]">
                             6.7” Super Retina <br />
@@ -85,18 +85,22 @@ const Index = (props: Props) => {
               </div>
 
               <div>
-                <video autoPlay muted className=" h-[650px] px-10 md:px-0">
+                <video
+                  autoPlay
+                  muted
+                  className=" h-[650px] px-10 md:-mt-6 md:px-0"
+                >
                   <source src="/video4.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
 
-              <div className="flex h-[150px] w-96 justify-end">
+              <div className="  hidden h-[250px] w-[200px] md:block">
                 <ParallaxBanner
                   layers={[
                     OpacityEffectAfter(
                       <>
-                        <div className=" hidden text-[17px] font-semibold text-[#fff] md:block">
+                        <div className=" text-[22px] font-semibold text-[#fff]">
                           iPhone 12 Pro Max
                           <div className=" text-[#aaa]">
                             6.7” Super Retina <br />
@@ -128,20 +132,20 @@ const Index = (props: Props) => {
               </div>
             </div>
             {/* button */}
-            <ParallaxBanner
-              layers={[
-                OpacityEffectBefore(
-                  <>
-                    <div className="text-center">
+            <div className="text-center">
+              <ParallaxBanner
+                layers={[
+                  OpacityEffectBefore(
+                    <>
                       <button className="learn-more-button hover:bg-[#8F8F8F] hover:text-black">
                         Compare sizes to iPhone 11 Pro
                       </button>
-                    </div>
-                  </>,
-                ),
-              ]}
-              className="h-[150px]"
-            />
+                    </>,
+                  ),
+                ]}
+                className="h-[150px]"
+              />
+            </div>
           </div>
         </div>
         <div className=" mt-[150px] md:text-center">

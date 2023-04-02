@@ -12,7 +12,7 @@ const Component = () => {
   };
 
   const headline: BannerLayer = {
-    translateY: [0, 30],
+    translateX: [0, 5],
     scale: [1, 1.05, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
