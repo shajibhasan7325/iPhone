@@ -201,6 +201,7 @@ const Index = (props: Props) => {
           />
         </div>
       </div>
+      {/* Surgical-grade */}
       <div className="relative my-[225px]">
         <h3 className="absolute top-64 left-48 rotate-90 text-4xl font-semibold md:text-[56px]">
           Surgical-grade
@@ -210,6 +211,9 @@ const Index = (props: Props) => {
           stainless steel.
         </h3>
       </div>
+      {/* End Surgical-grade  */}
+
+      {/*  Blows other phones */}
       <div className="bg-scroll pb-[150px]">
         <div className="max-w-screen-lg m-auto ">
           <div className="container flex items-center ">
@@ -233,27 +237,59 @@ const Index = (props: Props) => {
           </div>
         </div>
       </div>
+      {/* End Blows other phones */}
 
       <div className="text-center">
         <video autoPlay muted width={1000} className="mx-auto">
           <source src="/iphone.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <h3 className="mt-[55px] text-[56px] font-semibold leading-[67px]">
+        {/* <h3 className="mt-[55px] text-[56px] font-semibold leading-[67px]">
           Four finishing touches.
         </h3>
         <p className="mt-[24px] text-[21px] font-semibold leading-[25px] text-[#a1a1a6]">
           Pacific Blue, Gold, Silver, and Graphite
-        </p>
+        </p> */}
+
+        <ParallaxBanner
+          layers={[
+            OpacityEffectBefore(
+              <>
+                <h3 className="mt-[55px] text-[56px] font-semibold leading-[67px]">
+                  Four finishing touches.
+                </h3>
+                <p className="mt-[24px] text-[21px] font-semibold leading-[25px] text-[#a1a1a6]">
+                  Pacific Blue, Gold, Silver, and Graphite
+                </p>
+              </>,
+            ),
+          ]}
+          className=" h-[300px]"
+        />
       </div>
       <div className="mt-[425px] text-center">
         <div className="mb-[115px]">
-          <h3 className="text-5xl font-semibold leading-[96px] text-[#6e6e73] md:text-[80px]">
+          {/* <h3 className="text-5xl font-semibold leading-[96px] text-[#6e6e73] md:text-[80px]">
             Superfast wireless
           </h3>
           <h3 className="text-5xl font-semibold leading-[96px] text-[#fff] md:text-[80px]">
             Hello 5G.
-          </h3>
+          </h3> */}
+          <ParallaxBanner
+            layers={[
+              OpacityEffectAfter(
+                <>
+                  <h3 className="text-5xl font-semibold leading-[96px] text-[#6e6e73] md:text-[80px]">
+                    Superfast wireless
+                  </h3>
+                  <h3 className="text-5xl font-semibold leading-[96px] text-[#fff] md:text-[80px]">
+                    Hello 5G.
+                  </h3>
+                </>,
+              ),
+            ]}
+            className=" h-[200px]"
+          />
         </div>
 
         <div className="relative">
