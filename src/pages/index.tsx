@@ -7,7 +7,19 @@ import Index from "@/components/home";
 
 // animation
 const boxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 4.5 } },
+  // visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 4.5 } },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 200,
+      delay: 4.5,
+      duration: 0.5,
+    },
+  },
   hidden: { opacity: 0, scale: 0.6 },
 };
 const boxVariant2 = {

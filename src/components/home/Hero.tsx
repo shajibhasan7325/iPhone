@@ -35,7 +35,7 @@ function Hero({ boxVariant, videoRef }: Props) {
           style={{
             transition: "transform 0.5s ease",
           }}
-          className="mx-auto hero-video-wrap md:-mt-32"
+          className="hero-video-wrap mx-auto md:-mt-32"
           src="/hero.mp4"
         />
       </div>
@@ -44,7 +44,7 @@ function Hero({ boxVariant, videoRef }: Props) {
         layers={[
           OpacityEffectAfter(
             <>
-              <h3 className="w-4/6 mx-auto text-2xl font-semibold text-white">
+              <h3 className="mx-auto w-4/6 text-2xl font-semibold text-white">
                 5G goes Pro. A14 Bionic rockets past every other smartphone
                 chip. The Pro camera system takes low-light photography to the
                 next level — with an even bigger jump on iPhone 12 Pro Max. And
