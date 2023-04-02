@@ -182,7 +182,7 @@ const Index = (props: Props) => {
             <p className="design-glass-subheading-phone ">
               Ceramic Shield, tougher than any smartphone glass
             </p>
-            <button className="learn-more-button">Find out how</button>
+            <button className=" learn-more-button">Find out how</button>
           </div>
           {/* end for mobile */}
 
@@ -207,11 +207,11 @@ const Index = (props: Props) => {
       </div>
       {/* Surgical-grade */}
       <div className="relative my-[225px]">
-        <h3 className="absolute top-64 left-48 rotate-90 text-4xl font-semibold md:text-[56px]">
+        <h3 className="absolute top-[10rem] rotate-90 text-4xl font-semibold sm:left-0 md:top-64 md:left-48 md:text-[56px]">
           Surgical-grade
         </h3>
         <img src="/canvas.png" className="w-1/6 mx-auto" alt="" />
-        <h3 className="absolute top-[40rem] right-48 rotate-90 text-4xl font-semibold md:text-[56px]">
+        <h3 className="absolute left-36 top-[18rem] right-0 rotate-90 text-4xl font-semibold md:left-[22rem] md:top-[52rem] md:text-[56px]">
           stainless steel.
         </h3>
       </div>
@@ -221,11 +221,11 @@ const Index = (props: Props) => {
       <div className="bg-scroll pb-[150px]">
         <div className="max-w-screen-lg m-auto ">
           <div className="container flex items-center ">
-            <div className="w-1/3">
-              <h3 className="text-[56px] font-semibold leading-[67px]">
+            <div className="w-1/3 ">
+              <h3 className="text-[32px] font-semibold leading-[38px] md:text-[56px] md:leading-[67px]">
                 Blows other phones out of the water.
               </h3>
-              <p className=" text-[21px] font-[600] text-[#a1a1a6]">
+              <p className="text-[17px] font-[600] text-[#a1a1a6] md:text-[21px]">
                 Industry‑leading IP68 water resistance
               </p>
             </div>
@@ -259,11 +259,15 @@ const Index = (props: Props) => {
           layers={[
             OpacityEffectBefore(
               <>
-                <h3 className="mt-[55px] text-[56px] font-semibold leading-[67px]">
+                <h3 className="mt-[55px] text-[32px] font-semibold md:text-[56px] md:leading-[67px]">
                   Four finishing touches.
                 </h3>
-                <p className="mt-[24px] text-[21px] font-semibold leading-[25px] text-[#a1a1a6]">
+                <p className=" mt-[24px] hidden text-[21px] font-semibold leading-[25px] text-[#a1a1a6] md:block">
                   Pacific Blue, Gold, Silver, and Graphite
+                </p>
+                <p className=" mt-[17px] mr-[10rem] text-[21px] font-semibold  text-[#a1a1a6] md:hidden">
+                  Pacific Blue, Gold,
+                  <br /> Silver, and Graphite
                 </p>
               </>,
             ),
@@ -272,7 +276,7 @@ const Index = (props: Props) => {
         />
       </div>
       <div className="mt-[425px] text-center">
-        <div className="mb-[115px]">
+        <div className="mb-[40px] md:mb-[115px]">
           {/* <h3 className="text-5xl font-semibold leading-[96px] text-[#6e6e73] md:text-[80px]">
             Superfast wireless
           </h3>
@@ -283,7 +287,7 @@ const Index = (props: Props) => {
             layers={[
               OpacityEffectAfter(
                 <>
-                  <h3 className="text-5xl font-semibold leading-[96px] text-[#6e6e73] md:text-[80px]">
+                  <h3 className="text-5xl font-semibold text-[#6e6e73] md:text-[80px] md:leading-[96px]">
                     Superfast wireless
                   </h3>
                   <h3 className="text-5xl font-semibold leading-[96px] text-[#fff] md:text-[80px]">
@@ -292,14 +296,14 @@ const Index = (props: Props) => {
                 </>,
               ),
             ]}
-            className=" h-[200px]"
+            className="h-[200px] "
           />
         </div>
 
         <div className="relative">
           <img
             src="/frame.jpeg"
-            className="mx-auto w-[70%] object-cover"
+            className="mx-auto w-[80%] object-cover"
             alt=""
           />
           <img

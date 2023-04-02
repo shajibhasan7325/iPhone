@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 import { OpacityEffectAfter } from "src/utils/RSParallax";
@@ -61,7 +61,7 @@ function Hero({ boxVariant, videoRef }: Props) {
             </>,
           ),
         ]}
-        className="aspect-[3/1]"
+        className="h-[700px] md:h-[400px]"
       />
     </div>
   );
