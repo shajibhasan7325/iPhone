@@ -29,7 +29,7 @@ const Index = (props: Props) => {
                 layers={[
                   OpacityEffectAfter(
                     <>
-                      <h3 className=" text-center text-[32px] font-semibold md:text-[56px]">
+                      <h3 className=" m-auto w-[80%] text-center text-[32px] font-semibold md:w-full md:text-[56px]">
                         Less bezel, more screen.
                       </h3>
                     </>,
@@ -265,7 +265,7 @@ const Index = (props: Props) => {
                 <p className=" mt-[24px] hidden text-[21px] font-semibold leading-[25px] text-[#a1a1a6] md:block">
                   Pacific Blue, Gold, Silver, and Graphite
                 </p>
-                <p className=" mt-[17px] mr-[10rem] text-[21px] font-semibold  text-[#a1a1a6] md:hidden">
+                <p className=" mt-[17px] mr-[9rem] text-[21px] font-semibold  text-[#a1a1a6] md:hidden">
                   Pacific Blue, Gold,
                   <br /> Silver, and Graphite
                 </p>

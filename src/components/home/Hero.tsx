@@ -49,7 +49,15 @@ function Hero({ boxVariant, videoRef }: Props) {
           style={{
             transition: "transform 0.5s ease",
           }}
-          className="mx-auto hero-video-wrap md:-mt-32"
+          className="hidden mx-auto  hero-video-wrap md:-mt-32 md:block"
+          src="/hero.mp4"
+        />
+
+        <video
+          autoPlay
+          muted
+          width={2000}
+          className="mx-auto hero-video-wrap md:hidden"
           src="/hero.mp4"
         />
       </div>

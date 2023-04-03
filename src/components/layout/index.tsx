@@ -42,12 +42,12 @@ export default function Layout({
       >
         <NavBar />
       </div>
-      <main className="flex w-full flex-col items-center justify-center py-32">
+      <main className="flex flex-col items-center justify-center w-full py-32">
         {children}
       </main>
-      <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
+      {/* <div className="absolute w-full py-5 text-center bg-white border-t border-gray-200">
         <p className="text-gray-500">Footer</p>
-      </div>
+      </div> */}
     </>
   );
 }
