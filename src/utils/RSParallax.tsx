@@ -1,4 +1,3 @@
-import handler from "@/pages/api/og";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 
 export function OpacityEffectAfter(content: React.ReactNode) {
